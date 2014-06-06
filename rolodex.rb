@@ -26,6 +26,10 @@ class Rolodex
 	end
 
 	def printContacts()
-		@contacts.each(|c| c.printMe)
+		@contacts.each{|c| c.printMe}
+	end
+
+	def printAttr()
+		@contacts.each{|c| c.printAttribute}
 	end
 end

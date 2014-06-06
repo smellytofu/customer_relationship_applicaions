@@ -12,4 +12,19 @@ class Contact
 	def printMe()
 		puts "Name: #{@firstName} #{@lastName}\nEmail: #{@email}\nNotes: #{@notes}\nid: #{@id}"
 	end
+
+	def printAttribute(attribute)
+		case attribute
+		when 1
+			puts "#{@firstName}"
+		when 2
+			puts "#{@lastName}"
+		when 3
+			puts "#{@email}"
+		when 4
+			puts "#{@notes}"
+		when 5
+			puts "#{@id}"
+		end
+	end
 end

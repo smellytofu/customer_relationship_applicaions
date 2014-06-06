@@ -58,13 +58,13 @@ class CRM
 	def changeContact(myDex)
 		print "Enter id of the contact to be modified: "
 		modId = get.chomp.to_i
-		tempContact = dex.retrieveContact(modId)
+		tempContact = myDex.retrieveContact(modId)
 		puts "What do you wish to change?\n
 			  [1] First Name\n
 			  [2] Last Name\n
 			  [3] Email\n
 			  [4] Note\n
-			  [5] Id
+			  [5] Id\n
 			  [6] Exit"
 		option = gets.chomp.to_i
 		case option
@@ -87,6 +87,7 @@ class CRM
 			return
 		else
 			puts "That is not an option."
+		end
 	end
 
 	def deleteContact(myDex)
@@ -96,11 +97,13 @@ class CRM
 	end
 
 	def displayAllContacts(myDex)
-
+		myDex.printContacts
 	end
 
 	def displayAnAttribute(myDex)
-		
+		puts "Which attribute do you wish to print?\n[1] First Name\n[2] Last Name\n[3] Note\n[4] Id"
+		attribute = get.chomp.to_i
+		myDex.printAttr(attribute)
 	end
 
 	def self.run(name)
